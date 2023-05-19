@@ -10,43 +10,48 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<div class="card" style="width: 64rem;">
+
+
+<div class="card">
   <div class="alert alert-secondary" role="alert">
     Payment form Example
   </div>
+  <div class="alert alert-danger" role="alert">
+    Some fields are Missing
+  </div>
   <div class="card-body">
-    <div class="alert alert-danger" role="alert">
-      Some fields are Missing
-    </div>
-    <form>
+
+    <form class="container">
       <div class="row">
         <div class="col-5">
-          <label>Card #</label>
-          <input type="number" name="Card number" placeholder="XXXXXXXXXX">
+          <label>Card #</label> <!-- poner class ="form-control" -->
+          <input class="form-control" type="number" name="Card number" placeholder="XXXXXXXXXX">
         </div>
         <div class="col-3">
           <label>CVC #</label>
-          <input type="number" name="CVC" placeholder="000">
+          <input class="form-control" type="number" name="CVC" placeholder="000">
         </div>
         <div class="col-4">
           <label>Amount</label>
-          <input type="number" name="Amount" placeholder="Amount">
+          <input class="form-control" type="number" name="Amount" placeholder="Amount">
         </div>
       </div>
+
       <div class="row">
         <div class="col-6">
           <label>First Name</label>
-          <input type="text" name="First name">
+          <input class="form-control" type="text" name="First name">
         </div>
         <div class="col-6">
           <label>Last Name</label>
-          <input type="text" name="Last name">
+          <input class="form-control" type="text" name="Last name">
         </div>
       </div>
+
       <div class="row">
         <div class="col-6">
           <label>City</label>
-          <input type="text" name="City">
+          <input class="form-control" type="text" name="City">
         </div>
         <div class="col-3">
           <label>State</label>
@@ -59,30 +64,36 @@
         </div>
         <div class="col-3">
           <label>Postal Code</label>
-          <input type="number" name="PostalCode">
+          <input class="form-control" type="number" name="PostalCode">
         </div>
-        <div></div>
-          <label>We accept: </label>
-          <input type="radio" name="género" value="Mastercard" />Mastercard<br />
-          <input type="radio" name="género" value="Visa" />Visa<br />
-          <input type="radio" name="género" value="Diners> Club" />Diners Club<br />
-          <input type="radio" name="género" value="Anerican" />American<br />
-        
+
+        <div class="col-6 ">
+          <p>We accept: </p>
+          <div class="d-flex form-control">
+            <input type="radio" name="master" value="Mastercard" />Mastercard<br />
+            <input type="radio" name="visa" value="Visa" />Visa<br />
+            <input type="radio" name="diners" value="Diners> Club" />Diners Club<br />
+            <input type="radio" name="american" value="American" />American<br />
+
+          </div>
+        </div>
 
 
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Message</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Add only notes Here">
+        <input class="form-control" type="text" class="form-control" id="exampleFormControlInput1"
+          placeholder="Add only notes Here">
       </div>
-      <div class="row4">
+
+      <div class="alert alert-secondary d-flex flex-row-reverse grid gap-2" role="alert">
         <button type="button" class="btn btn-primary">Send</button>
         <button type="button" class="btn btn-secondary">Cancel</button>
       </div>
 
+    </form>
+
   </div>
 </div>
-
-
 
 </html>
